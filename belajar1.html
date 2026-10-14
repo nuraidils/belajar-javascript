@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript Pertama Kali</title>
+</head>
+<body>
+    <div id="satu">ini adalah text pertama</div>
+    <div class="daftar">1</div>
+    <div class="daftar">2</div>
+    <div class="daftar">3</div>
+    <div class="daftar">4</div>
+    <div class="daftar">5</div>
+    <button id="tekan">TEKAN SAYA</button>
+    <button onclick="matikan(true)">matikan lampu</button>
+    <button onclick="matikan(false)">hidupkan lampu</button>
+
+    <script type="text/javascript">
+        // di sini adalah kode javascript kita
+
+        // ini adalah komentar dari javascript
+        /* 
+            ini adalah komentar banyak baris dari javascript
+        */
+
+        // membuat variable
+        // var nama = "aidil"
+        // document.write("Nama saya adalah " + nama);
+
+        // // operasi
+        // var angka1 = 20,
+        //     angka2 = 34
+        // document.write(angka1 + angka2)
+
+        // // loop for
+        // for (i = 0; i < 10; i++) {
+        //     document.write(i + "<br>");
+        // }
+
+        // // if else
+        // if (angka1 > 18) {
+        //     document.write("Anda sudah dewasa")
+        // }
+
+        // DOM
+        // mengubah text dengan id satu
+        document.getElementById("satu").innerHTML = "halo, saya diubah"
+        // mengubah text dengan class daftar di index ke 2(3)
+        document.getElementsByClassName("daftar")[2].innerHTML = "saya diubah"
+
+        // BOM
+        // notifikasi
+        // alert("halo apakabar?")
+        // input
+        // var nama = prompt("masukkan nama anda")
+        // alert("selamat datang " + nama)
+
+        // DOM event listener click
+        document.getElementById('tekan').addEventListener('click', function () {
+            // kode yg dieksekusi ketika button diklik
+            var nama = prompt("masukkan nama anda")
+            alert("selamat datang " + nama)
+        })
+
+        // membuat function
+        function matikan(opsi) {
+            if (opsi == true) {
+                document.getElementsByTagName("body")[0].style.backgroundColor = "black"
+                // alternatif
+                // document.body.style.backgroundColor = "black"
+            } else {
+                // document.getElementsByTagName("body")[0].style.backgroundColor = "black"
+                // alternatif
+                document.body.style.backgroundColor = "white"
+            }
+        }
+    </script>
+</body>
+</html>
